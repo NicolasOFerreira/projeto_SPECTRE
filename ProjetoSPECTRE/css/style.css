@@ -174,7 +174,9 @@ a {
 }
 
 .imagem-principal{
-    justify-content: left;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
