@@ -30,7 +30,7 @@
 
 
         <main class="modelos">
-            <h3>Filtrar</h3>
+            <h3><br>FILTRAR</h3>
             <hr class="linha">
             <h3>OFERTAS EM DESTAQUES</h3>
             <div class="camisas-sem-modelo">
@@ -52,6 +52,9 @@
        
 
         </nav>
+
+
+
 
                <footer class="rodape">
     <div class="rodape-container">
@@ -107,3 +110,52 @@
         <p>© 2025 Spectre. Todos os direitos reservados.</p>
     </div>
 </footer>
+
+ <script>
+
+    const imagens = document.querySelectorAll(".camisas-sem-modelo img, .camisas-com-modelo img");
+
+  imagens.forEach(imagem => {
+    imagem.onmouseover = function() {
+      imagem.style.transform = "scale(1.04)";
+      imagem.style.transition = "0.3s";
+    };
+    imagem.onmouseout = function() {
+      imagem.style.transform = "scale(1)";
+    };
+  });    
+
+    const header = document.querySelector("header");
+
+    
+    header.addEventListener("click", function () {
+      this.style.backgroundColor =
+        this.style.backgroundColor === "black" ? "#B71C1C" : "black";
+    });
+
+   
+    const nome = localStorage.getItem("nomeUsuario");
+    if (nome) {
+      const saudacao = document.createElement("p");
+      saudacao.textContent = `Bem-vindo(a), ${nome}!`;
+      saudacao.style.color = "white";
+      saudacao.style.fontWeight = "bold";
+      saudacao.style.textAlign = "center";
+      saudacao.style.margin = "10px 0";
+      saudacao.style.fontSize = "18px";
+      header.appendChild(saudacao);
+    }
+
+    
+    header.addEventListener("mouseenter", () => {
+      header.style.transition = "0.3s";
+      header.style.transform = "scale(1.001)";
+      header.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.3)";
+    });
+    header.addEventListener("mouseleave", () => {
+      header.style.transform = "scale(1)";
+      header.style.boxShadow = "none";
+    });
+  </script>
+    
+</body>

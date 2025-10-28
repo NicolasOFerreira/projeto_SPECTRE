@@ -31,7 +31,9 @@
         
 
         <main class="imagem-principal">
-            <img src="img/fotoPrincipalPaginaInicial.svg" alt="modelos utilizando SPECTRE">
+            <img id="fotoDestaque" src="img/fotoPrincipalPaginaInicial.svg" alt="modelos utilizando SPECTRE">
+
+
         </main>
 
         </nav>
@@ -45,9 +47,9 @@
         <div class="rodape1">
             <img src="img/spectrefooter.svg" alt="logo da SPECTRE" class="rodape-logo">
             <div class="rodape-missao">
-                <h3>Nossa missão</h3>
+                <h3> <br> Nossa missão </h3>
                 <p>
-                    A Spectre nasceu para impulsionar a evolução da indústria da moda.
+                    <br> A Spectre nasceu para impulsionar a evolução da indústria da moda.
                     Aprendemos, inovamos e melhoramos constantemente, para criar um mundo
                     onde todos são encorajados a subir a barra e buscar excelência.
                 </p>
@@ -89,6 +91,52 @@
     </div>
 
     <div class="rodape-direitos">
-        <p>© 2025 Spectre. Todos os direitos reservados.</p>
+        <p> <br> © 2025 Spectre. Todos os direitos reservados.</p>
     </div>
 </footer>
+
+ <script>
+    const header = document.querySelector("header");
+
+
+    header.addEventListener("click", function () {
+      this.style.backgroundColor =
+        this.style.backgroundColor === "black" ? "#B71C1C" : "black";
+    });
+
+
+    function mostrarSaudacao() {
+      let nome = localStorage.getItem("nomeUsuario");
+
+      if (!nome) {
+        nome = prompt("Digite seu nome para continuar:");
+        if (nome) {
+          localStorage.setItem("nomeUsuario", nome);
+        }
+      }
+
+      if (nome) {
+        const saudacao = document.createElement("p");
+        saudacao.textContent = `Bem-vindo(a), ${nome}!`;
+        saudacao.style.color = "white";
+        saudacao.style.fontWeight = "bold";
+        saudacao.style.textAlign = "center";
+        saudacao.style.margin = "10px 0";
+        saudacao.style.fontSize = "18px";
+        header.appendChild(saudacao);
+      }
+    }
+    mostrarSaudacao();
+
+    header.addEventListener("mouseenter", () => {
+      header.style.transition = "0.3s";
+      header.style.transform = "scale(1.001)";
+      header.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.3)";
+    });
+    header.addEventListener("mouseleave", () => {
+      header.style.transform = "scale(1)";
+      header.style.boxShadow = "none";
+    });
+  </script>
+    
+</body>

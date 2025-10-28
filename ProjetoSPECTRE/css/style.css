@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
@@ -104,7 +102,7 @@ a {
     justify-content: space-between;
     flex-wrap: wrap;
     border-bottom: 1px solid #444;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 }
 
 .rodape1 {
@@ -112,23 +110,26 @@ a {
 }
 
 .rodape-logo {
-    width: 180px;
-    margin-bottom: 15px;
+    width: 450px;
+    margin-bottom: none;
+    padding: 5px;
 }
+
 
 .rodape-missao h3 {
     font-size: 1.1rem;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
 }
 
 .rodape-missao p {
+    margin-top: 7px;
     font-size: 0.9rem;
     color: #ccc;
     line-height: 1.5;
 }
 
 .rodape2, .rodape3, .rodape4 {
-    min-width: 150px;
+    min-width: 140px;
 }
 
 .rodape2 h4, .rodape3 h4, .rodape4 h4 {
@@ -173,11 +174,51 @@ a {
     margin-top: 20px;
 }
 
-.imagem-principal{
-    justify-content: center;
+.imagem-principal {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
+
+.botao-saiba-mais {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.botao-saiba-mais:hover {
+  background-color: #444;
+}
+
+.boas-vindas {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.boas-vindas input {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.boas-vindas p {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.modelos{
+  padding: 60px;
+  align-items: center;
+}
+
 
 @media (max-width: 768px) {
 
@@ -285,5 +326,6 @@ a {
 
   .rodape-direitos {
     font-size: 0.7rem;
+
   }
 }
