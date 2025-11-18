@@ -4,160 +4,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SPECTRE</title>
+        
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/componentes.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        
+        <script src="js/componentes.js" defer></script>
     </head>
 
     <body>
-        <header class="Cabecalho">
-                <nav class="BOTOES">
-                    <a href="index.html">
-                      <div class="linha-header"></div>
-                        <img class="Logo-cabecalho" src="img/spectrelogoo.svg" alt="logo da SPECTRE">
-                    </a>
-                    <ul class="começo-lista">
-                    <li class="começo-itens"><a href="Produtos.html">Produtos</a></li>
-                    <li class="começo-itens"><a href="Produtos.html">Lançamentos</a></li>
-                    <li class="começo-itens"><a href="Produtos.html">Masculino</a></li>
-                    <li class="começo-itens"><a href="Produtos.html">Feminino</a></li>
-                </ul>
-                </nav>
-                <nav class="sub-barra">
-                       <h1 class="texto-sub-barra"> SPECTRE EXPERIENCE </h1> 
-                </nav>
-     
-        </header>
+        <div id="header-container"></div> 
         
-
         <main class="imagem-principal">
             <img id="fotoDestaque" src="img/fotoPrincipalPaginaInicial.svg" alt="modelos utilizando SPECTRE">
-
-
         </main>
 
+        <div id="footer-container"></div>
 
-        <footer class="rodape">
-    <div class="rodape-container">
-
-    
-        <div class="rodape1">
-            <img src="img/spectrefooter.svg" alt="logo da SPECTRE" class="rodape-logo">
-            <div class="rodape-missao">
-                <h3> <br> Nossa missão </h3>
-                <p>
-                    <br> A Spectre nasceu para impulsionar a evolução da indústria da moda.
-                    Aprendemos, inovamos e melhoramos constantemente, para criar um mundo
-                    onde todos são encorajados a subir a barra e buscar excelência.
-                </p>
-            </div>
-        </div>
-
-    
-        <div class="rodape2">
-            <h4>Suporte</h4>
-            <ul>
-                <li><a href="#">Podemos Ajudar?</a></li>
-                <li><a href="#">Dúvidas Comuns</a></li>
-                <li><a href="#">Atendimento ao Cliente</a></li>
-                <li><a href="#">Opções de Pagamento</a></li>
-            </ul>
-        </div>
-
-       
-        <div class="rodape3">
-            <h4>Produtos</h4>
-            <ul>
-                <li><a href="#">Lançamentos</a></li>
-                <li><a href="#">Masculinos</a></li>
-                <li><a href="#">Femininos</a></li>
-                <li><a href="#">Infantis</a></li>
-            </ul>
-        </div>
-
-        
-        <div class="rodape4">
-            <h4>Contato</h4>
-            <div class="rodape-social">
-                <a href="#"><img src="img/facebook.svg" alt="facebook"></a>
-                <a href="#"><img src="img/instagram.svg" alt="Instagram"></a>
-                <a href="#"><img src="img/linkedin.svg" alt="LinkedIn"></a>
-                <a href="#"><img src="img/youtube.svg" alt="YouTube"></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="rodape-direitos">
-        <p> <br> © 2025 Spectre. Todos os direitos reservados.</p>
-    </div>
-</footer>
-
- <script>
-    const header = document.querySelector("header");
-
-
-    header.addEventListener("click", function () {
-      this.style.backgroundColor =
-        this.style.backgroundColor === "black" ? "#B71C1C" : "black";
-    });
-
-
-    function mostrarSaudacao() {
-      let nome = localStorage.getItem("nomeUsuario");
-
-      if (!nome) {
-        nome = prompt("Digite seu nome para continuar:");
-        if (nome) {
-          localStorage.setItem("nomeUsuario", nome);
-        }
-      }
-
-      if (nome) {
-        const saudacao = document.createElement("p");
-        saudacao.textContent = `Bem-vindo(a), ${nome}!`;
-        saudacao.style.color = "white";
-        saudacao.style.fontWeight = "bold";
-        saudacao.style.textAlign = "center";
-        saudacao.style.margin = "10px 0";
-        saudacao.style.fontSize = "18px";
-        header.appendChild(saudacao);
-      }
-    }
-    mostrarSaudacao();
-
-    header.addEventListener("mouseenter", () => {
-      header.style.transition = "0.3s";
-      header.style.transform = "scale(1.001)";
-      header.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.3)";
-    });
-    header.addEventListener("mouseleave", () => {
-      header.style.transform = "scale(1)";
-      header.style.boxShadow = "none";
-    });
-
-const underline = document.createElement("div");
-underline.classList.add("header-underline");
-document.querySelector(".BOTOES").appendChild(underline);
-
-const menuItens = document.querySelectorAll(".começo-itens a");
-
-const subBarra = document.querySelector(".sub-barra");
-
-menuItens.forEach(item => {
-  item.addEventListener("mouseenter", () => {
-    const rect = item.getBoundingClientRect();
-    const headerRect = document.querySelector(".Cabecalho").getBoundingClientRect();
-    const subRect = subBarra.getBoundingClientRect();
-
-    underline.style.width = `${rect.width}px`;
-    underline.style.left = `${rect.left - headerRect.left + rect.width / 2}px`;
-
-    underline.style.top = `${subBarra.offsetTop - 3}px`;
-
-  });
-
-  item.addEventListener("mouseleave", () => {
-    underline.style.width = "0";
-  });
-});
-  </script>
-    
-</body>
+        <script>
+            if (!localStorage.getItem("nomeUsuario")) {
+                let nome = prompt("Digite seu nome para continuar:");
+                if (nome) {
+                    localStorage.setItem("nomeUsuario", nome);
+                }
+            }
+        </script>
+    </body>
+</html>
