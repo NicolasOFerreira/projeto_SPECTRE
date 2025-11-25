@@ -21,8 +21,13 @@ A segunda parte foi destinada a modularização dos códigos adicionando respons
 
 Terceira parte: Está etapa está sendo destinada para a documentação do projeto e otimização do código.
 
-[github](espaço para git)
+# Acesso ao site:
+[link do site](https://nicolasoferreira.github.io/projeto_SPECTRE/)
+![Print do site funcionando](image-1.png)
+Data de publicação: 24/11/2025
 
+
+# Observações do processo: 
 Atualmente o media queries está funcionando bem centralizando as informações e ajustando a imagem principal de acordo com o tamanho da tela, porém ainda são necessárias algumas melhorias no rodapé.
 
 Os elementos que se repetem nas páginas são: Header, Nav e footer.
