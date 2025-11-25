@@ -44,4 +44,9 @@ A antiga interação de boas vindas ao usuário tinha um pequeno problema de fix
 Foi adicionado também um botão de voltar ao topo da página quando feita a rolagem, facilitando que o usuário volte ao início e continue a navegação.
 
 
+# Testes Realizados
 
+Navegadores testados: Google chrome, OperaGX, Samsung internet e Microsoft Edge.
+
+Dispositivos testados/resoluções: IphoneSE, iphone12, Ipad, Ipad PRO, Samsung s22, Samsung s24 FE e desktop HD.
+[link de evidências](./docs/testes-responsividade/)
